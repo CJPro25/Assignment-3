@@ -45,6 +45,8 @@ public class PlayerScript : MonoBehaviour
 
     void DoLogic()
     {
+        state = States.Idle;
+
         if (state == States.Idle)
         {
             PlayerIdle();
@@ -90,8 +92,6 @@ public class PlayerScript : MonoBehaviour
             state = States.Walk;
         }
 
-
-
     }
 
     void PlayerJumping()
@@ -101,17 +101,12 @@ public class PlayerScript : MonoBehaviour
         {
             //player has landed on floor
             state = States.Idle;
-
         }
     }
 
     void PlayerWalk()
     {
 
-        while (Input.GetKeyUp("up") == false)
-        {
-
-        
         // Set a constant forward velocity
         Vector3 forwardVelocity = transform.forward * moveSpeed;
 
@@ -119,11 +114,7 @@ public class PlayerScript : MonoBehaviour
         rb.linearVelocity = new Vector3(forwardVelocity.x, rb.linearVelocity.y, forwardVelocity.z);
 
         // Clamp the velocity magnitude (optional, depending on desired behavior)
-        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, moveSpeed); 
-        }
-
-        state = States.Idle;
-  
+        rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, moveSpeed);
     }
 
 
