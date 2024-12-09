@@ -872,8 +872,8 @@ MonoBehaviour:
   jumpForce: 5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
-  groundCheckDistance: 0.1
+    m_Bits: 64
+  groundCheckDistance: 0.65
 --- !u!54 &944776254
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1507,6 +1507,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SP_Ground01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9cc092fcd2f11144818dcc2a6b3559b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9cc092fcd2f11144818dcc2a6b3559b, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1808,7 +1816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb799e1c473b2849a5c98fab1cf495a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 100
+  sensitivity: 1000
   playerBody: {fileID: 944776251}
   playerHead: {fileID: 534009112}
 --- !u!114 &1421891817
