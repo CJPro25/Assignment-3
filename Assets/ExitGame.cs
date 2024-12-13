@@ -7,7 +7,12 @@ public class ExitGame : MonoBehaviour
     {
         if(Input.GetKey("escape") == true)
         {
-            SceneManager.LoadScene("Scene 0");
+#if UNITY_EDITOR
+        Debug.Log("Tried to quit");
+        UnityEditor.EditorApplication.isPlaying = false;  // This stops the play mode in the Unity editor
+#else
+            Application.Quit(); // Quit the game in a built version
+#endif
         }
     }
 }

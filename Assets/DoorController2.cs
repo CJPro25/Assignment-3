@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections; // Needed for IEnumerator
 
-public class DoorController : MonoBehaviour
+public class DoorController2 : MonoBehaviour
 {
     public Transform doorTransform;  // The door to be moved
     public float openYPosition = 3f;  // The Y position where the door will move to (open position)
@@ -12,25 +12,25 @@ public class DoorController : MonoBehaviour
     private bool button2 = false;
 
     // This will be called to move the door
-    public void ToggleDoor()
+    public void ToggleDoor2()
     {
         if (isOpen)
         {
             // Move the door back to the closed position along the Y-axis
             StopAllCoroutines();
-            StartCoroutine(MoveDoor(doorTransform.position.y, closedYPosition));
+            StartCoroutine(MoveDoor2(doorTransform.position.y, closedYPosition));
         }
         else
         {
             // Move the door to the open position along the Y-axis
             StopAllCoroutines();
-            StartCoroutine(MoveDoor(doorTransform.position.y, openYPosition));
+            StartCoroutine(MoveDoor2(doorTransform.position.y, openYPosition));
         }
         isOpen = !isOpen;  // Toggle the state of the door
     }
 
     // Coroutine to smoothly move the door along the Y-axis
-    private IEnumerator MoveDoor(float startYPosition, float targetYPosition)
+    private IEnumerator MoveDoor2(float startYPosition, float targetYPosition)
     {
         float timeElapsed = 0f;
         Vector3 currentPosition = doorTransform.position;  // Get the current position

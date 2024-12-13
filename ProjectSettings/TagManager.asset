@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Music
   - Ground
+  - Button1
+  - Button2
   layers:
   - Default
   - TransparentFX
