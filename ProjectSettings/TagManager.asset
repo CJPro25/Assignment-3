@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Button1
   - Button2
+  - Camera
   layers:
   - Default
   - TransparentFX
